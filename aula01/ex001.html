@@ -9,11 +9,14 @@
             background-color: bisque;
             color: black;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-size: 3em;
         }
 
         h1 {
             color: brown;
+        }
+
+        label {
+            font-size: 1em;
         }
     </style>
 </head>
@@ -22,11 +25,14 @@
     <h1>OLÁ, MUNDO!</h1>
 
     <P>Eu estou criando o meu primeiro código em JavaScript,</P>
-    
     <script>
-        
-        var nome = window.prompt('qual o teu nome cria ?') // barra para digitar
-        window.alert('fala ae, '+ nome + ' ,é um prazer te conhecer')
+        var n1 = Number(window.prompt('digite um número: '))
+
+        var n2 = Number(window.prompt('digite outro número: '))
+
+        s = n1 + n2
+
+        window.alert(`a soma dos números ${n1} e ${n2} é igual a ${s}`)
     </script>
 </body>
 </html>
