@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calc</title>
+    <style>
+        div#res{
+            display: inline-block;
+            width: 100px;
+            margin-left: 10px;
+        }
+
+        input {
+            width: 80px;
+        }
+
+        input#botao {
+            position: absolute;
+            left: 20px;
+            top: 110px;
+        }
+
+        input#limpar {
+            position: absolute;
+            left: 110px;
+            top: 110px;
+        }
+    </style>
+</head>
+<body>
+    <h1>calcule a soma</h1>
+    <input type="number" name="num1" id="idnum1"> <strong>+</strong>
+    <input type="number" name="num2" id="idnum2"> =
+    <div id="res">
+
+    </div>
+    <input type="button" value="somar" onclick="clicar()" id="botao">
+    <input type="reset" value="limpar" id="limpar" onclick="limpar()">
+
+    <script>
+        
+        function clicar() {
+        var num1 = window.document.querySelector('input#idnum1')
+        var num2 = window.document.querySelector('input#idnum2')
+        var resultado = window.document.querySelector('div#res')
+
+        var n1 = Number(num1.value)
+        var n2 = Number(num2.value)
+
+        s = n1 + n2
+            resultado.innerText = `${s}`
+        }
+
+        function limpar() {
+        var num1 = window.document.querySelector('input#idnum1')
+        var num2 = window.document.querySelector('input#idnum2')
+        var resultado = window.document.querySelector('div#res')
+
+        var n1 = Number(num1.value)
+        var n2 = Number(num2.value)
+
+        resultado.innerText=''
+        num1.value=''
+        num2.value=''
+        
+            
+        }
+
+    </script>
+</body>
+</html>
