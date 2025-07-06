@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <style>
+        div#corpo {
+            background-color: grey;
+            padding: 10px;
+            width: 400px;
+            height: 200px;
+            border-radius: 10px;
+            position: absolute;
+            left: 25%;
+
+        }
+
+        section#tela {
+            background-color: white;
+            text-align: right;
+            font-size: 1.3em;
+            border-radius: 5px;
+            
+        }
+
+        input#idnum2 {
+            width: 70px;
+            background-color: antiquewhite;
+            position: absolute;
+            left: 280px;
+            top: 80px;
+            
+        }
+
+         input#idoper {
+            width: 70px;
+            background-color: rgb(231, 231, 231);
+            position: absolute;
+            left: 180px;
+            top: 80px;
+            border-radius: 5px;
+            
+        }
+
+         input#idnum1 {
+            width: 70px;
+            background-color: antiquewhite;
+            position: absolute;
+            left: 80px;
+            top: 80px;
+            
+        }
+
+        input#idigual {
+            width: 70px;
+            font-size: 1em;
+            position: relative;
+            top: 100px;
+            left: 130px;
+        }
+
+        input#idlimpar {
+            width: 70px;
+            font-size: 1em;
+            position: absolute;
+            top: 135px;
+            left: 220px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Calculadora</h1>
+
+    <div id="corpo">
+
+        <section id="tela">
+                5+5
+        </section>
+
+        <section id="teclado">
+            <input type="number" name="num1" id="idnum1">
+            <input type="text" name="oper" id="idoper">
+            <input type="number" name="num2" id="idnum2">
+
+            <input type="button" value="=" id="idigual">
+            <input type="button" value="limpar" id="idlimpar">
+        </section>
+
+    </div>
+
+    <script>
+        var num1 = window.document.querySelector('input#idnum1')
+        var num2 = window.document.querySelector('input#idnum2')
+        var oper = window.document.querySelector('input#idoper')
+        var igual = window.document.querySelector('input#idigual')
+        var limpar = window.document.querySelector('input#idlimpar')
+
+        num1.addEventListener('click', clicar)
+        num2.addEventListener('click', clicar)
+        oper.addEventListener('click', clicar)
+        igual.addEventListener('click', clicar)
+        limpar.addEventListener('click', clicar)
+
+        function clicar(){
+            var n1 = Number(num1.value)
+            var n2 = Number(num2.value)
+            var sinal = eval(oper)
+        }
+    </script>
+    
+</body>
+</html>
