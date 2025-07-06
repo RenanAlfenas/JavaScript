@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multas</title>
+    <style>
+        div#res {
+            background-color: rgb(156, 155, 155);
+            width: 410px;
+            
+            margin-top: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        strong {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    Velocidade do carro: <input type="number" name="txtvel" id="idvel"> km/h
+    <input type="button" value="Verificar" onclick="clicar()">
+
+    <div id="res">
+        status:
+    </div>
+
+    <script>
+        function clicar(){
+            var txtvel = window.document.getElementById('idvel')
+            var vel = Number(txtvel.value)
+            var res = window.document.querySelector("div#res")
+
+            res.innerHTML = ` a sua velocidade é de ${vel} km/h.` 
+             if (vel > 60){
+                res.innerHTML += `você ultrapassou o limite de velocidade de 60km/h e <strong>foi multado(a)</strong>.`
+             } else {
+                res.innerHTML += ` você está dentro do limite de velocidade de 60km/h.`
+             }
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pais</title>
+</head>
+<body>
+    <h1>Idicador de Nacionalidade</h1>
+    <p>Em que país você mora ?</p>
+    <input type="text" name="nacio" id="idnacio" placeholder="ex: BRASIL">
+    <input type="button" value="Checar" onclick="clicar()">
+
+    <div id="res">status</div>
+
+    <script>
+        function clicar(){
+            var nacionalidade = window.document.querySelector('input#idnacio')
+            var nar = String(nacionalidade.value)
+            var res = window.document.querySelector('div#res')
+
+            if (nar == 'BRASIL') {
+                res.innerHTML = `seu país de origem é: ${nar} <p> você é brasileiro! </p>`
+            } else {
+                res.innerHTML = `seu país de origem é: ${nar} <p> você é estrangeiro(a) </P>`
+            }
+        }
+    </script>
+</body>
+</html>
