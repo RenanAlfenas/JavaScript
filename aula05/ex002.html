@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horas</title>
+    <link rel="stylesheet" href="estilos\\style.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Hora do Dia</h1>
+    </header>
+
+    <section>
+
+        <div id="hora">
+            <p>agora são 21 horas</p>
+        </div>
+
+        <div>
+            <img src="fotos/manhã.jpg" alt="manhã" id="foto">
+        </div>
+
+
+
+
+
+
+    </section>
+
+    <footer>
+        <h5> &copy; CursoemVideo</h3>
+    </footer>
+
+    <script>
+        var agora = new Date()
+        var rel = agora.getHours()
+        var min = agora.getMinutes()
+        hora.innerText = `Agora são ${rel}:${min}`
+
+        var imagem = window.document.getElementById('foto')
+
+        if (rel > 6 && rel < 12) {
+            imagem.src = 'fotos/manhã.jpg';
+            window.document.body.style.backgroundColor = '#DA8639'
+        } else {
+            if (rel >= 12 && rel < 18) {
+                imagem.src = 'fotos/tarde.jpg'
+                window.document.body.style.backgroundColor = '#FF8201'
+            } else {
+                imagem.src = 'fotos/noite.jpg'
+ 
+                window.document.body.style.backgroundColor = '#000000'
+
+            }
+        }
+        
+    </script>
+</body>
+</html>
