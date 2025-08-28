@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input#tn1,input#tn2 {
+            width: 50px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>digite 2 números para fazer a soma:</h1>
+    <input type="number" name="tn1" id="tn1"> +
+    <input type="number" name="tn2" id="tn2">
+    <input type="button" value="somar" onclick="somar()">
+
+    <div id="res">Resultado</div>
+
+    <script>
+        window.confirm("você está pronto(a) para usar um modelo incompleto de uma calculadora ?")
+
+        function somar() {
+        var num1 = window.document.getElementById('tn1')
+        var num2 = window.document.getElementById('tn2')
+        var res = window.document.getElementById('res')
+
+        var n1 = Number (num1.value)
+        var n2 = Number(num2.value)
+        var result = n1 + n2
+        
+        res.innerHTML = `a soma de ${n1} e ${n2} é igual a <strong>${result}</strong>!`
+        }
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#area {
+            background-color: blanchedalmond;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="area">
+        <h1>clique aqui!</h1>
+    </div>
+
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar )
+        a.addEventListener('mouseout', sair)
+        function clicar() {
+            a.style.backgroundColor = 'blue'
+            a.innerText = 'clicou'
+            a.style.fontSize = '2em'
+            a.style.fontWeight = 'bold'
+        }
+        
+        function entrar() {
+            a.style.backgroundColor = 'pink'
+        }
+
+        function sair() {
+            a.style.backgroundColor = "blanchedalmond"
+            a.innerText = 'clique aqui!'
+            a.style.fontSize = '2em'
+            a.style.fontWeight = 'bold'
+        }
+
+
+    </script>
+</body>
+</html>

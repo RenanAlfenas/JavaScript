@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+
+    <style>
+        body {
+            background-color: rgb(67, 67, 187);
+        
+        }
+
+        h1 {
+            color: aquamarine;
+        }
+
+        p {
+            color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <h1>meu nome</h1>
+    <p id="paragrafo1">olé pessoas meu nome é renan</p>
+
+    <h1>sobre nome é:</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo assumenda magni vitae beatae, voluptate repellat, non minus, asperiores aperiam minima nesciunt! Aliquam molestiae dignissimos veniam consequuntur dolores qui eius architecto.</p>
+
+    <script>
+        var h1 = window.document.getElementsByTagName('h1') [1]
+        h1.style.textDecoration = 'underline'
+
+        var p1 = window.document.getElementById('paragrafo1')
+        p1.style.color = 'black'
+        p1.style.fontWeight = 'bold'
+        p1.innerText = 'teste de lorem ipsum'
+
+        var p2 = window.document.getElementsByTagName('p') [1]
+        p2.style.textDecoration = 'underline'
+        p2.style.color = 'pink'
+        p2.style.textShadow = '5px 5px 10px black'
+
+        
+       var n1 = Number( window.prompt ('digite um número:') )
+       var n2 = Number (window.prompt ('digite outro número'))
+       var n3 = n1 + n2
+       window.alert (`a soma de ${n1} e ${n2} é igual a ${n3}!`)
+    </script>
+    
+</body>
+</html>
