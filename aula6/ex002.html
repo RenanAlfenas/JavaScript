@@ -16,11 +16,23 @@
     <section>
 
         <div id="verificador">
-            Ano de Nascimento: <input type="number" name="ano de nascimento:" id="textano"> <br>
-            Sexo: Masculino<input type="radio" name="gen" id="masculino" onclick="masc()">
-                  Feminino <input type="radio" name="gen" id="feminino" onclick="fem()"> <br>
+            <p>
+                Ano de Nascimento: 
+                <input type="number" name="ano de nascimento:" id="textano"> 
+            </p>
 
-                  <input type="button" value="verificar" onclick="verificar()">
+            <p>
+                Sexo: 
+                <input type="radio" name="gen" id="masculino" onclick="masc()">
+                <label for="masculino">Masculino</label>
+
+                <input type="radio" name="gen" id="feminino" onclick="fem()">
+                <label for="feminino">Feminino</label>
+            </p>
+
+            <p>
+                <input type="button" value="verificar" onclick="verificar()">
+            </p>
         </div>
 
         <div id="msg">
@@ -28,7 +40,7 @@
         </div>
 
         <div id="imagem">
-            <img src="fotos/transparente.png" alt="foto" id="foto">
+            
         </div>
 
     </section>
