@@ -14,10 +14,14 @@ h1 {
 section {
     background-color: white;
     padding: 20px;
-    width: 50vw;
+    width: 60vw;
     margin: auto;
     border-radius: 5px;
     box-shadow: 10px 20px 15px rgba(0, 0, 0, 0.164);
+}
+
+select {
+    width: 150px;
 }
 
 input {
