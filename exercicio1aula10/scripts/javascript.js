@@ -4,25 +4,54 @@ var lis = window.document.getElementById('lista')
 
 var vari = []
 
+function lista(n, l) {
+    if (l.indexOf(Number(n)) != -1) {
+        return true
+    } else {
+        return false
+    }
+}
+
+function verificar(n) {
+    if(Number(n) >=1 && Number(n) <= 100) {
+        return true
+    } else {
+        return false
+    }
+}
 
 
 function adicionar() {
-    if (num.value.length == 0 || num.value < 1 || num.value > 100) {
-        window.alert('erro! digite um número maior que 1 e menor que 100!')
-    } else if (vari.indexOf(c) != -1) {
-        window.alert('o valor já está na lista!')
-    }
-    else  {
-        var n = Number(num.value)
-        var c = c + 1
-        vari[c] = n
+    if (verificar(num.value) ==  false) {
+        window.alert('o valor digitado é maior que 100 ou menor 1. tente novamente')
+    } else if (lista(num.value , vari) ==  false) {
+       vari.push(Number(num.value))
 
         var op = window.document.createElement('option')
-        op.text = ` o valor inserido é: ${vari[c]}`
-        op.value = ` valor${c}`
+        op.text = `o valor ${num.value} foi adicionado`
+        op.value = `valor ${num.value}`
 
         lis.appendChild(op)
-   
+        
+    } else if (vari.push(Number(num.value)) !== -1) {
+     
+        window.alert('o valor ja esta na lista!')
     }
+
+    num.value = ''
+    num.focus()
+
+    
+
+    
+
+    
 }
+
+
+
+
+
+
+
 
