@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <header>
+        <h1>Renan Alfenas</h1>
+        <div id="links">
+            <h3 onclick="inicio()">Início</h3>
+            <h3 onclick="projetos()">Projetos</h3>
+            <h3 onclick="contatos()">Contatos</h3>
+        </div>
+    </header>
+
+    <section id="apresentacao">
+
+        <h1>QUEM SOU EU ?</h1>
+
+        <img src="imagem apresentação.jpg" alt="minha foto">
+        <P>olá! me chamo Renan e sou um programador iniciante e criei esse site para fazer parte do meu portfólio pessoal. O intúito deste site é apresentar alguns dos meus projetos pessoais para mostar minhas habilidades como programador.</P>
+
+        <p>Atualmente eu tenho conhecimentos básicos de HTML5, CSS e JAVASCRIPT. Eu estou aprendendo 
+            mais sobre toadas as funções destas linguagnes através da criação desse portifólio. Por enquanto, eu estou apenas criando essa página de portfólio, mas o próximo projeto alvo é a criação de um site de TO DO LIST.
+        </p>
+
+        <p> A minha TO DO LIST vai servir para criação de tarefas e vai poder também marcar e desmarcar os intes que o usuário adicionar na lista. tenho uma noção de quais comandos de JavaScrip serão
+        necessários para a criação desse site, mas apenas terei idéia de como vai ser quando eu começar o projeto.
+        </p>
+
+    </section>
+
+    <section id="projetos">
+
+        <div id="item1">
+            <h1>Projetos</h1>
+        </div>
+        
+        <div id="item2">
+            <div id="site1" onmouseenter="entrar1()" onmouseleave="sair1()">
+                <h2>Pórtfólio pessoal</h2>
+                <p>Site para presentar meus projetos e habilidades.</p>
+            </div>
+            <div id="site2" onmouseenter="entrar2()" onmouseleave="sair2()">
+                <h2>Lista de Tarefas</h2>
+                <p>Site de TO DO LIST. serve para marcar tarefas que vai fazer e eliminar as que já foram feitas</p>
+            </div>
+            <div id="site3" onmouseenter="entrar3()" onmouseleave="sair3()">
+                <h2>Calculadora</h2>
+                <p>Site com uma calculadora para mostrar meus conhecimentos de JAVASCRIPT.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+
+        <h1>Entre em Contato</h1>
+
+        <section id="contatos">
+            <div id="card1" onmouseenter="entrar4()" onmouseleave="sair4()" >
+                <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank">Email</a>
+            </div>
+            <div id="card2" onmouseenter="entrar5()" onmouseleave="sair5()">
+                <a href="https://www.linkedin.com/in/r-alfenas-3447b5317/" target="_blank">LinkEdin</a>
+            </div>
+            <div id="card3" onmouseenter="entrar6()" onmouseleave="sair6()">
+                <a href="https://github.com/RenanAlfenas" target="_blank">GitHub</a>
+            </div>
+        </section>
+
+    </footer>
+
+    <script>
+        function contatos() {
+            let contatos = window.document.getElementById('contatos')
+            contatos.scrollIntoView({behavior: "smooth"})
+        }
+
+        function projetos() {
+            let proj = window.document.getElementById('projetos')
+            proj.scrollIntoView({behavior: "smooth"})
+        }
+
+        function entrar1() {
+            var card1 = window.document.getElementById('site1')
+            card1.style.boxShadow = '5px 0px 20px white'
+            card1.style.transition = '0.5s'
+            card1.style.cursor = 'pointer'
+        }
+
+        function sair1() {
+            var card1 = window.document.getElementById('site1')
+            card1.style.boxShadow = 'none'
+        }
+
+
+
+        function entrar2() {
+            var card2 = window.document.getElementById('site2')
+            card2.style.boxShadow = '5px 0px 20px white'
+            card2.style.transition = '0.5s'
+            card2.style.cursor = 'pointer'
+        }
+
+        function sair2() {
+            var card2 = window.document.getElementById('site2')
+            card2.style.boxShadow = 'none'
+        }
+
+
+        function entrar3() {
+            var card3 = window.document.getElementById('site3')
+            card3.style.boxShadow = '5px 0px 20px white'
+            card3.style.cursor = 'pointer'
+        }
+
+        function sair3() {
+            var card3 = window.document.getElementById('site3')
+            card3.style.boxShadow = 'none'
+            card3.style.transition = '0.5s'
+        }
+
+        
+
+
+        
+        
+    </script>
+</body>
+</html>
