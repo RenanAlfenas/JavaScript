@@ -61,13 +61,13 @@
         <h1>Entre em Contato</h1>
 
         <section id="contatos">
-            <div id="card1" onmouseenter="entrar4()" onmouseleave="sair4()" >
+            <div id="card1" >
                 <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank">Email</a>
             </div>
-            <div id="card2" onmouseenter="entrar5()" onmouseleave="sair5()">
+            <div id="card2">
                 <a href="https://www.linkedin.com/in/r-alfenas-3447b5317/" target="_blank">LinkEdin</a>
             </div>
-            <div id="card3" onmouseenter="entrar6()" onmouseleave="sair6()">
+            <div id="card3">
                 <a href="https://github.com/RenanAlfenas" target="_blank">GitHub</a>
             </div>
         </section>
@@ -75,6 +75,14 @@
     </footer>
 
     <script>
+
+        function inicio() {
+            let inicio = window.document.getElementById('apresentacao')
+            inicio.scrollIntoView({behavior: "smooth"})
+
+        }
+
+
         function contatos() {
             let contatos = window.document.getElementById('contatos')
             contatos.scrollIntoView({behavior: "smooth"})
@@ -84,6 +92,8 @@
             let proj = window.document.getElementById('projetos')
             proj.scrollIntoView({behavior: "smooth"})
         }
+
+
 
         function entrar1() {
             var card1 = window.document.getElementById('site1')
