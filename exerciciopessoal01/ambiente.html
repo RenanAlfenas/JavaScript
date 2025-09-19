@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>site com menu</title>
+    <link rel="stylesheet" href="estilo/style.css">
+</head>
+<body>
+    <header>
+        <h1>SITE DE COMIDA E DELIVERY</h1> 
+
+        <h2 onclick="expandir()";  onmouseenter="entrar()">=</h2>
+        
+    </header>
+
+    
+        
+
+    <nav id="menu" onmouseleave="sair()">
+        
+
+        <h3>bebidas</h3>
+        <h3>comidas</h3>
+        <h3>contatos</h3>
+    </nav>
+    
+    <section id="corpo">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo doloribus modi corrupti aliquid provident saepe repellendus odit porro, culpa explicabo dolorem pariatur numquam labore ipsum ad optio incidunt totam. Aliquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem voluptatibus veniam ab alias soluta at deserunt error voluptatum sed voluptas cupiditate, minima architecto qui mollitia magni iusto excepturi omnis culpa.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo doloribus modi corrupti aliquid provident saepe repellendus odit porro, culpa explicabo dolorem pariatur numquam labore ipsum ad optio incidunt totam. Aliquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem voluptatibus veniam ab alias soluta at deserunt error voluptatum sed voluptas cupiditate, minima architecto qui mollitia magni iusto excepturi omnis culpa.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo doloribus modi corrupti aliquid provident saepe repellendus odit porro, culpa explicabo dolorem pariatur numquam labore ipsum ad optio incidunt totam. Aliquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem voluptatibus veniam ab alias soluta at deserunt error voluptatum sed voluptas cupiditate, minima architecto qui mollitia magni iusto excepturi omnis culpa.</p>
+    </section>
+
+
+    <script>
+        function expandir() {
+
+            let menu = window.document.getElementById('menu')
+
+            menu.style.width = '200px'
+            menu.style.transition = '0.5s' 
+            menu.style.cursor='pointer'
+        }
+
+        function sair() {
+
+            let menu = window.document.getElementById('menu')
+
+            menu.style.width = '100px'
+            menu.style.transition = '1seg' 
+            menu.style.cursor='pointer'
+        }
+
+        function entrar() {
+            let bot = window.document.getElementsByTagName("h2")[0]
+            bot.style.cursor='pointer'
+        }
+    </script>
+    
+</body>
+</html>
