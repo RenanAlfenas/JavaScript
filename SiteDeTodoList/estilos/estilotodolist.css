@@ -30,7 +30,7 @@ input#enviar {
 }
 
 
-div#txt {
+div#texto {
     text-align: center;
     width: 350px;
     height: 30px;
@@ -68,7 +68,17 @@ input#task1 {
 }
 
 
+ul#lista {
+    display: flex;
+    
+
+}
+
+
 .completo {
     text-decoration: line-through;
     color: grey;
 }
+
+
+

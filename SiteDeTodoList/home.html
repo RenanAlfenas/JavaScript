@@ -17,17 +17,20 @@
             <h1>TO DO LIST</h1>
         </div>
 
-        <div id="txt">
+        <div id="texto">
 
-            <input type="text" name="txt" id="txt">
-            <input type="button" value="adicionar" id="enviar" onclick="adicionar()">
+            <input type="text" name="txt" id="txt" placeholder="Adicione uma tarefa...">
+            <input type="button" value="adicionar" id="enviar" onclick="adicionar()"> 
+
+            
 
         </div>
 
         <div id="tarefas">
 
-            <input type="checkbox" name="check1" id="check1" onclick="check()">
-            <input type="text" name="task1" id="task1">
+            <ul id="lista">
+                
+            </ul>
             
             
 
@@ -37,31 +40,39 @@
     </section>
 
     <script>
-        function check() {
-            var marq = window.document.getElementById('check1')
-            var tar = window.document.getElementById('task1')
-
-
-            marq.addEventListener('click', function() {
-
-                if(marq.checked) {
-                    tar.classList.add("completo")
-                } else {
-                    tar.classList.remove("completo")
-                }
-
-            })
-        }
-
-
         function adicionar() {
-            var txt = window.document.getElementById('txt')
-            var tar = window.document.getElementById('task1')
 
-            var elemento = document.createElement('input');
-            elemeto.type = "checkbok";
+            var msg = window.document.getElementById('txt');
+            var lista = window.document.getElementById('lista');
+
+            var valor = msg.value;
+
+                if(msg.value !== "") {
+                    
+
+                    if(valor) {
+                    const check = window.document.createElement('input')
+                    check.type = 'checkbox'
+                    lista.appendChild(check)
+
+                    const novo = window.document.createElement('p')
+                    
+                    const op = window.document.createElement('option')
+                    op.text = msg.value
+                    
+
+                    lista.appendChild(op)
+                    msg.value = ""
+
+                    
+                } else {
+                    window.alert('insira uma tarefa')
+                }}
             
         }
+
+
+       
     </script>
 </body>
 </html>
