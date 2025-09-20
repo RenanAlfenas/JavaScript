@@ -3,11 +3,14 @@
 *{
     margin: 0px;
 }
+  /* corpo do site */
 body {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: auto auto;
+
 }
 
+/* estilizção do menu latela */
 section#menu {
     background-color: #1D2A2C;
     width: 100px;
@@ -15,70 +18,75 @@ section#menu {
     border-radius: 0px 10px 10px 0px;
 }
 
+/* estilização do cabeçalhi do site */
+
 div#cabecalho {
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 30px;
-    font-size: 2em;
-    
-}
-
-input#enviar {
-    margin-left: 10px;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-
-div#texto {
-    text-align: center;
-    width: 350px;
-    height: 30px;
-    margin: auto;
-    display:flex ;
-
-}
-
-input#txt {
-    width: 350px;
-    height: 30px;
-    border-radius: 5px;
+    margin: 20px;
     font-size: 1.5em;
 }
 
+/* estilização do caixa de texto e do botão de adicionar */
 
-section#area {
-    
-    width: 100vw;
-    height: 100vh;
+div#texto {
+    display: flex;
+    gap: 10px;
 }
+
+input#txt {
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+input#adicionar {
+    border-radius: 5px;
+    outline: none;
+    background-color: #1D2A2C;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+input#adicionar:hover {
+    background-color: darkslategrey;
+    cursor: pointer;
+}
+
+/* estilização da lista de tarefas */
 
 div#tarefas {
-    
-    width: 350px;
-    margin: auto;
-    margin-top: 20px;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 0px;
 }
-
-input#task1 {
-    border: none;
-    border-radius: 5px;
-    width: 300px;
-}
-
 
 ul#lista {
     display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    list-style-type: none;
     
+    
+}
 
+input.checkbox {
+    align-self: center;
+    margin-right: 10px;
+    padding-top: 10px;
+    
 }
 
 
-.completo {
-    text-decoration: line-through;
-    color: grey;
-}
+
+   
+
+
+
+
+
 
 
 

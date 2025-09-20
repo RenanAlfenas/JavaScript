@@ -19,8 +19,8 @@
 
         <div id="texto">
 
-            <input type="text" name="txt" id="txt" placeholder="Adicione uma tarefa...">
-            <input type="button" value="adicionar" id="enviar" onclick="adicionar()"> 
+            <input type="text" name="txt" id="txt" placeholder="Adicione uma tarefa..." autocomplete="off">
+            <input type="button" value="adicionar" id="adicionar" onclick="adicionar()"> 
 
             
 
@@ -29,6 +29,7 @@
         <div id="tarefas">
 
             <ul id="lista">
+                
                 
             </ul>
             
@@ -39,40 +40,6 @@
 
     </section>
 
-    <script>
-        function adicionar() {
-
-            var msg = window.document.getElementById('txt');
-            var lista = window.document.getElementById('lista');
-
-            var valor = msg.value;
-
-                if(msg.value !== "") {
-                    
-
-                    if(valor) {
-                    const check = window.document.createElement('input')
-                    check.type = 'checkbox'
-                    lista.appendChild(check)
-
-                    const novo = window.document.createElement('p')
-                    
-                    const op = window.document.createElement('option')
-                    op.text = msg.value
-                    
-
-                    lista.appendChild(op)
-                    msg.value = ""
-
-                    
-                } else {
-                    window.alert('insira uma tarefa')
-                }}
-            
-        }
-
-
-       
-    </script>
+    <script src="java/scripts.js"></script>
 </body>
 </html>
