@@ -9,6 +9,7 @@ function adicionar() {
         const li = window.document.createElement('li')
         
         const check = window.document.createElement('input')
+        
         check.type = 'checkbox'
         check.id = 'checkbox'
         check.classList.add('checkbox')
@@ -16,11 +17,23 @@ function adicionar() {
             clicar(this);
         };
 
+        
         const span = window.document.createElement('span')
-        span.textContent = txt.value
+        span.textContent = txt.value 
+        
+
+        const div = window.document.createElement('div')
+        div.textContent = "❌"
+        div.id = 'remove'
+        div.onclick = function() {
+            deletar(this)
+        }
+
+        
 
         li.appendChild(check)
         li.appendChild(span)
+        li.appendChild(div)
         lista.appendChild(li)
 
         txt.value = ""
@@ -46,4 +59,9 @@ function saiu() {
 
     leave.style.width = '100px'
     leave.style.transition = '0.5s'
+}
+
+function deletar(li) {
+    li.parentElement.remove()
+
 }
