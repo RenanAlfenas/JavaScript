@@ -72,12 +72,21 @@ ul#lista {
     
 }
 
-input.checkbox {
+input#checkbox {
     align-self: center;
     margin-right: 10px;
     padding-top: 10px;
     
 }
+.completo {
+    text-decoration: line-through;
+    color: rgb(153, 153, 153);
+}
+
+
+
+
+
 
 
 
